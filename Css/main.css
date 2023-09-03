@@ -950,6 +950,10 @@ main .container .pics-item .trio {
 .helping .container .help-image img {
 	width: 100%;
 	-webkit-mask-image: url("../Images/mask_1.svg");
+	-moz-mask-image: url("../Images/mask_1.svg");
+	-ms-mask-image: url("../Images/mask_1.svg");
+	-o-mask-image: url("../Images/mask_1.svg");
+	mask-image: url('../Images/mask_1.svg');
 }
 
 @media (max-width: 767px) {
