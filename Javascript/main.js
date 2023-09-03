@@ -112,7 +112,7 @@ mainSection.addEventListener("mouseout", () => {
 
 // ---------------------------------------------------------
 
-let swiper = new Swiper(".mySwiper", {
+let swiper1 = new Swiper(".swiper-container-1", {
 	spaceBetween: 30,
 	centeredSlides: true,
 	loop: true,
@@ -127,5 +127,36 @@ let swiper = new Swiper(".mySwiper", {
 	navigation: {
 		nextEl: ".swiper-button-next",
 		prevEl: ".swiper-button-prev",
+	},
+});
+
+let swiper2 = new Swiper(".swiper-container-2", {
+	slidesPerView: 1,
+	centeredSlides: true,
+	loop: true,
+	autoplay: {
+		delay: 1000,
+		disableOnInteraction: false,
+	},
+	pagination: {
+		el: ".swiper-pagination-2",
+		clickable: true,
+	},
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+	breakpoints: {
+		640: {
+			slidesPerView: 1,
+		},
+		768: {
+			slidesPerView: 3,
+			spaceBetween: 40,
+		},
+		1024: {
+			slidesPerView: 5,
+			spaceBetween: 50,
+		},
 	},
 });

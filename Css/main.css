@@ -1285,10 +1285,24 @@ main .container .pics-item .trio {
 	color: var(--black-color);
 }
 
+
+
+/* ------------------- The Swiper Library ----------------------------------------------------- */
+.body-swipper {
+	position: relative;
+}
+
+.swiper {
+	width: 100%;
+}
+
 .say .swiper-slide {
 	display: flex;
 	justify-content: space-between;
 	padding-inline: 20px;
+	align-items: center;
+	user-select: none;
+	cursor: grab;
 }
 
 .say .swiper-slide .text-swiper {
@@ -1303,8 +1317,7 @@ main .container .pics-item .trio {
 .say .swiper-slide .text-swiper .para-swp > p {
 	position: relative;
 	font-family: "Laila", sans-serif;
-	font-size: 26px;
-	font-weight: 500;
+	font-size: 18px;
 	text-transform: capitalize;
 	margin-bottom: 50px;
 }
@@ -1320,7 +1333,7 @@ main .container .pics-item .trio {
 }
 
 .say .swiper-slide .text-swiper .named-swp h4 {
-	font-size: 18px;
+	font-size: 17px;
 	font-weight: 600;
 }
 
@@ -1343,11 +1356,13 @@ main .container .pics-item .trio {
 }
 
 .say .swiper-pagination {
+	height: 30px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: 2px;
 	transform: translateX(-25px);
+	position: initial;
 }
 
 .say .swiper-pagination span{
@@ -1439,5 +1454,149 @@ main .container .pics-item .trio {
 	.say .swiper-slide .text-swiper .named-swp h4,
 	.say .swiper-slide .text-swiper .named-swp p {
 		margin-inline: auto;
+	}
+}
+
+/* -------------------- End Say ---------------------------------------------------- */
+
+/* -------------------- Start Clients ----------------------------------------------- */
+
+.clients {
+	padding-block: 80px;
+	color: var(--black-color);
+}
+
+.clients .swiper {
+	width: 100%;
+	padding-top: 50px;
+}
+
+.swiper-slide {
+	display: flex;
+	justify-content: space-between;
+	padding-inline: 20px;
+	align-items: center;
+	user-select: none;
+	cursor: grab;
+}
+
+.swiper-pagination-2 {
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: translateX(-18px);
+	position: initial;
+	margin-top: 30px;
+}
+
+.swiper-pagination-2 span{
+	background-color: #9d9d9d;
+	opacity: 0.3;
+	width: 8px;
+	height: 8px;
+	transition: var(--first-tran);
+	border: 3px solid transparent;
+}
+
+.swiper-pagination-2 span.swiper-pagination-bullet-active {
+	background-color: transparent;
+	opacity: 1;
+	width: 14px;
+	height: 14px;
+	border: 3px solid var(--yellow-color);
+	position: relative;
+}
+
+.swiper-pagination-2 span::before {
+	content: "";
+	border-radius: 40px;
+	width: 0;
+	height: 2px;
+	background-color: var(--yellow-color);
+	position: absolute;
+	top: 50%;
+	left: -50%;
+	transform: translate(50%, -50%);
+	transition: var(--first-tran);
+}
+
+.swiper-pagination-2 span:last-child::before {
+	content: "";
+	border-radius: 40px;
+	width: 0;
+	height: 2px;
+	background-color: var(--yellow-color);
+	position: absolute;
+	top: 50%;
+	left: -50%;
+	transform: translate(calc(-100% - 2px), -50%);
+	transition: var(--first-tran);
+}
+
+.swiper-pagination-2 span.swiper-pagination-bullet-active::before {
+	width: 36px;
+}
+
+.swiper-pagination-2 span.swiper-pagination-bullet-active ~ span {
+	transform: translateX(34px);
+}
+
+.swiper-pagination-2 span.swiper-pagination-bullet-active:last-child {
+	transform: translateX(34px);
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+	bottom: 45px !important;
+}
+
+/* --------------------------- End Swiper ------------------------------------ */
+
+/* --------------------------- Start Let-Hand -------------------------------- */
+
+.let-hand {
+	padding-block: 80px;
+	color: var(--black-color);
+	text-align: center;
+	background-color: #01b8a2;
+	background-image: url('../Images/bottom-bg.png');
+	position: relative;
+	z-index: -1;
+	height: calc(100vh - 99.60px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.let-hand .container p {
+	font-size: 32px;
+	font-weight: 400;
+	text-transform: capitalize;
+	margin-bottom: 50px;
+}
+
+.let-hand .container h3 {
+	font-size: 60px;
+	font-weight: 700;
+	text-transform: capitalize;
+	color: var(--bg-color);
+	margin-bottom: 50px;
+}
+
+.let-hand .container .btn-component {
+	width: 200px;
+	height: 50px;
+	margin-inline: auto;
+}
+
+@media (max-width: 767px) {
+
+	.let-hand .container p {
+		font-size: 22px;
+	}
+
+	.let-hand .container h3 {
+		font-size: 34px;
+		font-weight: 600;
 	}
 }

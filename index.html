@@ -45,35 +45,23 @@
 		/>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
+		<!-- ---------- Start Swipper Style ----------------------------------------------------------------------------- -->
+
+  <style>
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 200px;
+      object-fit: cover;
+    }
+  </style>
 
 
-		<style>
-			.body-swipper {
-				position: relative;
-			}
-
-			.body-swipper {
-				margin: 0;
-				padding: 0;
-			}
-
-			.swiper {
-				width: 100%;
-			}
-
-			.swiper-slide {
-				align-items: center;
-				user-select: none;
-				cursor: grab;
-			}
-
-			.swiper-slide img {
-				display: block;
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-			}
-		</style>
 		<!-- ---------- End Swipper Style ----------------------------------------------------------------------------- -->
 	</head>
 
@@ -590,7 +578,7 @@
 				</div>
 
 				<div class="body-swipper">
-					<div class="swiper mySwiper">
+					<div class="swiper mySwiper swiper-container-1">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
 								<div class="text-swiper">
@@ -700,8 +688,75 @@
 							</div>
 						</div>
 					</div>
+					<div class="swiper-pagination"></div>
 				</div>
-				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+
+		<div class="clients">
+			<div class="container">
+				<div class="title-component">
+					<div class="para-components">
+						<p>our partners</p>
+					</div>
+					<h2>clients</h2>
+				</div>
+
+				<!-- Swiper -->
+				<div class="swiper mySwiper swiper-container-2">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="Images/clients/1-icon.png" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="Images/clients/2-icon.png" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="Images/clients/3-icon.png" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="Images/clients/4-icon.png" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="Images/clients/5-icon.png" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="Images/clients/6-icon.png" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="Images/clients/7-icon.png" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="Images/clients/8-icon.png" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="Images/clients/9-icon.png" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="Images/clients/10-icon.png" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="Images/clients/11-icon.png" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="Images/clients/12-icon.png" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="Images/clients/13-icon.png" alt="">
+						</div>
+					</div>
+					<div class="swiper-pagination-2"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="let-hand">
+			<div class="container">
+				<p>let's work together</p>
+				<h3>need a hand? <br> we have many!</h3>
+				<div class="btn-component">
+					<button>start a project</button>
+				</div>
 			</div>
 		</div>
 	</body>
