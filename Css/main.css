@@ -1111,7 +1111,8 @@ main .container .pics-item .trio {
 .our-work .container .items-boxes .card {
 	position: relative;
 	overflow: hidden;
-	box-shadow: rgba(50, 50, 93, 0.45) 0px 6px 12px -2px, rgba(0, 0, 0, 0.5) 0px 3px 7px -3px;
+	box-shadow: rgba(50, 50, 93, 0.45) 0px 6px 12px -2px,
+		rgba(0, 0, 0, 0.5) 0px 3px 7px -3px;
 }
 
 .our-work .container .items-boxes .card .image-work img {
@@ -1165,7 +1166,7 @@ main .container .pics-item .trio {
 }
 
 .our-work .container .items-boxes .card .text-work p::before {
-	content: '';
+	content: "";
 	width: 0;
 	height: 1px;
 	background-color: var(--black-color);
@@ -1180,6 +1181,13 @@ main .container .pics-item .trio {
 	width: 70%;
 }
 
+.our-work .container .btn-component {
+	margin-top: 80px;
+	margin-inline: auto;
+	width: 190px;
+	height: 48px;
+}
+
 /* ------------------------------- End Our Work ------------------------------------------ */
 
 /*  ------------------------------ Start Process ---------------------------------------------- */
@@ -1192,16 +1200,12 @@ main .container .pics-item .trio {
 	z-index: -1;
 }
 
-
-
 .process .articles {
 	padding-top: 40px;
 	counter-reset: count-num 0;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
-
-
 
 .process .articles .box {
 	position: relative;
@@ -1211,7 +1215,7 @@ main .container .pics-item .trio {
 }
 
 .process .articles .box::before {
-	content: "0"counter(count-num);
+	content: "0" counter(count-num);
 	color: var(--yellow-color);
 	font-size: 150px;
 	position: absolute;
@@ -1264,5 +1268,172 @@ main .container .pics-item .trio {
 
 	.process .articles .box h3 {
 		margin-bottom: 20px;
+	}
+}
+
+/* -------------------- End Process ------------------------------- */
+
+/* -------------------- Start Say ------------------------------------- */
+/* ---------------- There Is A Part Of This Swiper In Html Style ------------ */
+
+.say {
+	padding-block: 80px;
+	color: var(--black-color);
+}
+
+.say .swiper-slide {
+	display: flex;
+	justify-content: space-between;
+	padding-inline: 20px;
+}
+
+.say .swiper-slide .text-swiper {
+	width: 60%;
+}
+
+.say .swiper-slide .text-swiper .para-swp {
+	display: flex;
+	gap: 10px;
+}
+
+.say .swiper-slide .text-swiper .para-swp > p {
+	position: relative;
+	font-family: "Laila", sans-serif;
+	font-size: 26px;
+	font-weight: 500;
+	text-transform: capitalize;
+	margin-bottom: 50px;
+}
+
+.say .swiper-slide .text-swiper i {
+	font-size: 30px;
+	margin-left: 10px;
+	color: var(--yellow-color);
+}
+
+.say .swiper-slide .text-swiper .named-swp {
+	padding-left: 46px;
+}
+
+.say .swiper-slide .text-swiper .named-swp h4 {
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.say .swiper-slide .text-swiper .named-swp p {
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.say .swiper-slide .text-swiper .named-swp h4,
+.say .swiper-slide .text-swiper .named-swp p {
+	padding: 4px 8px;
+	color: var(--black-color);
+	background-color: var(--yellow-color);
+	width: fit-content;
+}
+
+.say .swiper-slide .image-swiper img {
+	width: 300px;
+	-webkit-mask-image: url("../Images/mask_1.svg");
+}
+
+.say .swiper-pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2px;
+	transform: translateX(-25px);
+}
+
+.say .swiper-pagination span{
+	background-color: var(--black-color);
+	opacity: 1;
+	width: 10px;
+	height: 10px;
+	transition: var(--first-tran);
+	border: 3px solid transparent;
+}
+
+.say .swiper-pagination span.swiper-pagination-bullet-active {
+	background-color: transparent;
+	width: 18px;
+	height: 18px;
+	border: 3px solid var(--yellow-color);
+	position: relative;
+}
+
+.say .swiper-pagination span::before {
+	content: "";
+	border-radius: 40px;
+	width: 0;
+	height: 2px;
+	background-color: var(--yellow-color);
+	position: absolute;
+	top: 50%;
+	left: -50%;
+	transform: translate(50%, -50%);
+	transition: var(--first-tran);
+}
+
+.say .swiper-pagination span:last-child::before {
+	content: "";
+	border-radius: 40px;
+	width: 0;
+	height: 2px;
+	background-color: var(--yellow-color);
+	position: absolute;
+	top: 50%;
+	left: -50%;
+	transform: translate(calc(-100% - 2px), -50%);
+	transition: var(--first-tran);
+}
+
+.say .swiper-pagination span.swiper-pagination-bullet-active::before {
+	width: 50px;
+}
+
+.say .swiper-pagination span.swiper-pagination-bullet-active ~ span {
+	transform: translateX(50px);
+}
+
+.say .swiper-pagination span.swiper-pagination-bullet-active:last-child {
+	transform: translateX(50px);
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+	bottom: 45px !important;
+}
+
+@media (max-width: 992px) {
+	.say .swiper-slide {
+		flex-direction: column-reverse;
+		justify-content: flex-end;
+		height: auto;
+		gap: 60px;
+	}
+
+	.say .container .body-swipper {
+		padding-top: 50px;
+	}
+
+	.say .swiper-slide {
+		text-align: center;
+	}
+
+	.say .swiper-slide .text-swiper {
+		width: 100%;
+	}
+
+	.say .swiper-slide .text-swiper i {
+		display: none;
+	}
+
+	.say .swiper-slide .text-swiper .named-swp {
+		padding: 0;
+	}
+	.say .swiper-slide .text-swiper .named-swp h4,
+	.say .swiper-slide .text-swiper .named-swp p {
+		margin-inline: auto;
 	}
 }

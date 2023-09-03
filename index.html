@@ -19,9 +19,51 @@
 			rel="stylesheet"
 		/>
 
+		<!-- Google Font ****  -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Laila&display=swap"
+			rel="stylesheet"
+		/>
+
 		<!-- JavaScript File -->
 		<script src="Javascript/main.js" defer></script>
 	</head>
+
+	<!-- Swipper Bundle --------------------------------------------------------------------------------------------->
+	<link rel="stylesheet" href="node_modules/swiper/swiper-bundle.min.css" />
+	<script src="node_modules/swiper/swiper-bundle.min.js"></script>
+
+	<style>
+		.body-swipper {
+			position: relative;
+		}
+
+		.body-swipper {
+			margin: 0;
+			padding: 0;
+		}
+
+		.swiper {
+			width: 100%;
+			/* height: 100%; */
+		}
+
+		.swiper-slide {
+			align-items: center;
+			user-select: none;
+			cursor: grab;
+		}
+
+		.swiper-slide img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	</style>
+	<!-- ---------- End Swipper Style ----------------------------------------------------------------------------- -->
 
 	<body>
 		<header>
@@ -466,6 +508,10 @@
 						</div>
 					</a>
 				</div>
+
+				<div class="btn-component">
+					<button>see all works</button>
+				</div>
 			</div>
 		</div>
 
@@ -518,5 +564,134 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="say">
+			<div class="container">
+				<div class="title-component">
+					<div class="para-components">
+						<p>testmonials</p>
+					</div>
+					<h2>
+						what they <br />
+						say
+					</h2>
+				</div>
+
+				<div class="body-swipper">
+					<div class="swiper mySwiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="text-swiper">
+									<div class="para-swp">
+										<i class="fa-solid fa-quote-left"></i>
+										<p>
+											I loved dealing with Taqnia team. They are creative,
+											supportive and provided creative ideas I wasn't expecting. I
+											wish them all the best
+											<i class="fa-solid fa-quote-right"></i>
+										</p>
+									</div>
+									<div class="named-swp">
+										<h4>Petopia Online Store</h4>
+										<p>Mariam Obaidan, Owner</p>
+									</div>
+								</div>
+								<div class="image-swiper">
+									<img src="Images/say/pic-1.png" alt="" />
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="text-swiper">
+									<div class="para-swp">
+										<i class="fa-solid fa-quote-left"></i>
+										<p>
+											All thanks and appreciation to you for your efforts in
+											designing the logo of Sawaed Company, and for the keenness
+											and interest we have felt in meeting any amendments we
+											wanted to make on the design as well as the speed of
+											achievement. With our best wishes for success
+											<i class="fa-solid fa-quote-right"></i>
+										</p>
+									</div>
+									<div class="named-swp">
+										<h4>Sawaed Employment</h4>
+										<p>Amal Al Hazaa, Owner</p>
+									</div>
+								</div>
+								<div class="image-swiper">
+									<img src="Images/say/pic-2.png" alt="" />
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="text-swiper">
+									<div class="para-swp">
+										<i class="fa-solid fa-quote-left"></i>
+										<p>
+											It was a pleasure working with Taqnia team, they were very
+											accommodating to our needs and delivered the project on
+											time.
+											<i class="fa-solid fa-quote-right"></i>
+										</p>
+									</div>
+									<div class="named-swp">
+										<h4>ClassTap Mobile App</h4>
+										<p>Rana Majeed, Founder & CEO</p>
+									</div>
+								</div>
+								<div class="image-swiper">
+									<img src="Images/say/pic-3.png" alt="" />
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="text-swiper">
+									<div class="para-swp">
+										<i class="fa-solid fa-quote-left"></i>
+										<p>
+											Thank you so so much for the efforts and your super wow
+											designs. We have worked together more than tree times and
+											yet every time I am amazed. And thank you for your patience
+											with my modifications until we reached the needed design.
+											<i class="fa-solid fa-quote-right"></i>
+										</p>
+									</div>
+									<div class="named-swp">
+										<h4>Sawa Cabin</h4>
+										<p>Nadia, Projects Manager</p>
+									</div>
+								</div>
+								<div class="image-swiper">
+									<img src="Images/say/pic-4.png" alt="" />
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="text-swiper">
+									<div class="para-swp">
+										<i class="fa-solid fa-quote-left"></i>
+										<p>
+											All thanks and gratitude to Taqnia team for creativity and
+											innovation in designs and for commitment to time. The
+											company team and their manager are one of the best and
+											finest companies that dealt with them both in innovation and
+											commitment to deadlines.
+											<i class="fa-solid fa-quote-right"></i>
+										</p>
+									</div>
+									<div class="named-swp">
+										<h4>Abdulrahman Al-Mahmoud</h4>
+										<p>Founder & CEO, Al Mahmoud Law Firm</p>
+									</div>
+								</div>
+								<div class="image-swiper">
+									<img src="Images/say/pic-5.png" alt="" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+
+
 	</body>
 </html>

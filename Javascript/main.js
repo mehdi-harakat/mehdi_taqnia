@@ -104,11 +104,28 @@ const mainSection = document.querySelector("main");
 const shapes = document.querySelector("main .shapes");
 mainSection.addEventListener("mousemove", (e) => {
 	shapes.style.transform = `translate(-${e.pageX / 80}px ,-${e.pageY / 50}px)`;
-	// shapes.style.transform = `translateX(-${e.pageX / 80}px)`;
-	// shapes.style.top = `-${e.pageY / 50}px`;
-	// shapes.style.left = `-${e.pageX / 80}px`;
 });
 
 mainSection.addEventListener("mouseout", () => {
 	shapes.style.transform = `translate(0)`;
+});
+
+// ---------------------------------------------------------
+
+let swiper = new Swiper(".mySwiper", {
+	spaceBetween: 30,
+	centeredSlides: true,
+	loop: true,
+	autoplay: {
+		delay: 3500,
+		disableOnInteraction: false,
+	},
+	pagination: {
+		el: ".swiper-pagination",
+		clickable: true,
+	},
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
 });
