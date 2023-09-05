@@ -52,12 +52,19 @@ window.addEventListener("click", (e) => {
 });
 
 // ----------------------------------------------------------------------------------------------
-
+const up = document.querySelector(".up a i");
 window.addEventListener("scroll", () => {
+	
 	if (scrollY >= 160) {
 		document.querySelector("header").classList.add("active");
 	} else {
 		document.querySelector("header").classList.remove("active");
+	}
+
+	if (scrollY >= 440 ) {
+		up.classList.add('active');
+	} else {
+		up.classList.remove('active');
 	}
 });
 

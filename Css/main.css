@@ -8,6 +8,7 @@
 	--border-color: #e7e7e8;
 	--para-color: #4d4d4d;
 	--red-hover: #cf425e;
+	--footer-bg-color: #202020;
 	--first-tran: all 0.3s ease-in-out;
 }
 
@@ -36,6 +37,31 @@ body {
 	position: relative;
 	z-index: -100;
 }
+
+/* ----------- End Global Rules -------------------- */
+/* _________________________________________________________________ */
+/* ----------- Start Container Rules --------------- */
+
+.up a i {
+	font-size: 32px;
+	color: var(--yellow-color);
+	cursor: pointer;
+	position: fixed;
+	right: 18px;
+	bottom: 18px;
+	opacity: 0;
+	pointer-events: none;
+	z-index: 30000;
+	transform: translateY(100px);
+	transition: var(--first-tran);
+}
+
+.up a i.active {
+	opacity: 1;
+	pointer-events: all;
+	transform: translateY(0);
+}
+
 
 /* ----------- End Global Rules -------------------- */
 /* _________________________________________________________________ */
@@ -953,7 +979,7 @@ main .container .pics-item .trio {
 	-moz-mask-image: url("../Images/mask_1.svg");
 	-ms-mask-image: url("../Images/mask_1.svg");
 	-o-mask-image: url("../Images/mask_1.svg");
-	mask-image: url('../Images/mask_1.svg');
+	mask-image: url("../Images/mask_1.svg");
 }
 
 @media (max-width: 767px) {
@@ -1285,8 +1311,6 @@ main .container .pics-item .trio {
 	color: var(--black-color);
 }
 
-
-
 /* ------------------- The Swiper Library ----------------------------------------------------- */
 .body-swipper {
 	position: relative;
@@ -1365,13 +1389,13 @@ main .container .pics-item .trio {
 	position: initial;
 }
 
-.say .swiper-pagination span{
-	background-color: var(--black-color);
+.say .swiper-pagination span {
+	background-color: transparent;
 	opacity: 1;
 	width: 10px;
 	height: 10px;
 	transition: var(--first-tran);
-	border: 3px solid transparent;
+	border: 6px solid var(--black-color);
 }
 
 .say .swiper-pagination span.swiper-pagination-bullet-active {
@@ -1420,7 +1444,10 @@ main .container .pics-item .trio {
 	transform: translateX(50px);
 }
 
-.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
 	bottom: 45px !important;
 }
 
@@ -1490,13 +1517,13 @@ main .container .pics-item .trio {
 	margin-top: 30px;
 }
 
-.swiper-pagination-2 span{
-	background-color: #9d9d9d;
+.swiper-pagination-2 span {
+	background-color: transparent;
 	opacity: 0.3;
 	width: 8px;
 	height: 8px;
 	transition: var(--first-tran);
-	border: 3px solid transparent;
+	border: 4px solid var(--black-color);
 }
 
 .swiper-pagination-2 span.swiper-pagination-bullet-active {
@@ -1546,7 +1573,10 @@ main .container .pics-item .trio {
 	transform: translateX(34px);
 }
 
-.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
 	bottom: 45px !important;
 }
 
@@ -1559,17 +1589,17 @@ main .container .pics-item .trio {
 	color: var(--black-color);
 	text-align: center;
 	background-color: #01b8a2;
-	background-image: url('../Images/bottom-bg.png');
+	background-image: url("../Images/bottom-bg.png");
 	position: relative;
 	z-index: -1;
-	height: calc(100vh - 99.60px);
+	height: calc(100vh - 99.6px);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 .let-hand .container p {
-	font-size: 32px;
+	font-size: 22px;
 	font-weight: 400;
 	text-transform: capitalize;
 	margin-bottom: 50px;
@@ -1590,7 +1620,6 @@ main .container .pics-item .trio {
 }
 
 @media (max-width: 767px) {
-
 	.let-hand .container p {
 		font-size: 22px;
 	}
@@ -1598,5 +1627,181 @@ main .container .pics-item .trio {
 	.let-hand .container h3 {
 		font-size: 34px;
 		font-weight: 600;
+	}
+}
+
+/* ------------------------------------- End Let Hand -------------------------------------------------- */
+
+/* --------------------------------- Start Footer ----------------------------------------- */
+
+footer {
+	padding-top: 80px;
+	background-color: var(--footer-bg-color);
+	color: var(--bg-color);
+}
+
+footer .container .holder .part-one {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 30px;
+	gap: 46px;
+}
+
+footer .container .holder .part-one .foot-logo img {
+	width: 200px;
+	margin-bottom: 10px;
+}
+
+footer .container .holder .part-one .foot-logo p {
+	font-size: 20px;
+	font-weight: 400;
+	text-transform: capitalize;
+}
+
+footer .container .holder .part-one .foot-images {
+	display: flex;
+	gap: 14px;
+}
+
+footer .container .holder .part-one .foot-images .pic-pseudo {
+	position: relative;
+	width: 60px;
+	height: 60px;
+}
+
+footer .container .holder .part-one .foot-images .pic-pseudo::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: var(--yellow-color);
+	opacity: 0;
+	transition: var(--first-tran);
+}
+
+footer .container .holder .part-one .foot-images .pic-pseudo:hover::before {
+	opacity: 0.5;
+}
+
+footer .container .holder .part-one .foot-images img {
+	width: 100%;
+	height: 100%;
+}
+
+footer .container .holder hr {
+	border: none;
+	border-bottom: 1px solid #4b4b4b;
+}
+
+footer .container .holder .part-two {
+	padding-block: 50px;
+	display: flex;
+	gap: 100px;
+}
+
+footer .container .holder .part-two ul h3 {
+	margin-bottom: 32px;
+	color: var(--yellow-color);
+	font-size: 22px;
+	font-weight: 700;
+}
+
+footer .container .holder .part-two ul.list-three h3 {
+	visibility: hidden;
+}
+
+footer .container .holder .part-two ul li {
+	margin-bottom: 16px;
+}
+
+footer .container .holder .part-two ul li a {
+	font-size: 18px;
+	font-weight: 500;
+	color: var(--bg-color);
+	text-transform: capitalize;
+	transition: var(--first-tran);
+}
+footer .container .holder .part-two ul li a span {
+	font-size: 20px;
+	margin-right: 16px;
+	color: var(--yellow-color);
+}
+
+footer .container .holder .part-two ul li a:hover {
+	color: var(--yellow-color);
+}
+
+footer .container .holder .part-three {
+	padding-block: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+
+footer .container .holder .part-three .copyright p {
+	font-size: 15px;
+	font-weight: 400;
+}
+
+footer .container .holder .part-three .social-media i {
+	font-size: 22px;
+	margin-left: 20px;
+	transition: var(--first-tran);
+	cursor: pointer;
+}
+
+footer .container .holder .part-three .social-media i:hover {
+	color: var(--yellow-color);
+}
+
+@media (max-width: 992px) {
+	footer .container .holder .part-three .social-media i {
+		font-size: 20px;
+		margin-left: 16px;
+	}
+
+	footer .container .holder .part-three .copyright p {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 767px) {
+	footer .container .holder .part-one,
+	footer .container .holder .part-two,
+	footer .container .holder .part-three {
+		flex-direction: column;
+	}
+
+	footer .container .holder .part-two {
+		gap: 50px;
+	}
+
+	footer .container .holder .part-one .foot-logo img {
+		width: 180px;
+	}
+
+	footer .container .holder .part-one .foot-logo p {
+		font-size: 16px;
+	}
+
+	footer .container .holder .part-one .foot-images .pic-pseudo {
+		width: 76px;
+		height: 76px;
+	}
+
+	footer .container .holder .part-two ul.list-three h3 {
+		display: none;
+	}
+
+	footer .container .holder .part-three .copyright p {
+		font-size: 13px;
+		text-align: center;
+		line-height: 1.8;
+		margin-bottom: 20px;
+	}
+
+	footer .container .holder .part-three .social-media {
+		margin-inline: auto;
 	}
 }
